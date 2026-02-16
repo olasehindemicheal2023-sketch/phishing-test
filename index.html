@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="veiwport" content="width=device-width, initial-scale=1,0">
+    <title>PHISHING FROM TSET </title>
+    <style>
+        body{
+            font-family: sans-serif, monospace;
+        }
+        .card{
+            max-width: 400px;
+            background-color: darkviolet;
+            padding: 20px;
+            margin: 0 auto;
+            border-radius: 10px;
+            box-shadow: o 4px 8px 0;
+        }
+        h1{
+            text-align: center;
+
+        }
+        p{
+            color: rgb(235, 230, 238)
+        }
+        input{
+            padding: 10px 15px;
+            width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            border: 2px solid grey;
+        }
+        button{
+            padding: 10px 15px;
+            width: 100%;
+            border-radius: 10PX;
+            background-color: cadetblue;
+            color: blueviolet;
+            font-size: large;
+            font-weight: 700;
+            border: none;
+        }
+        span{
+            color: white;
+            font-size: 20px;
+            width: 100%;
+            height: 40PX;
+            padding: 10px;
+            margin-top: 10px;
+            display: inline-block;
+            box-sizing: border-box;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+         <hi>Phishing From</hi>
+        <p>This is to stimulate a phishing from that capture the user input and displays it on the screen
+        <input type="email" id="email" placeholder="Enter your email"> 
+        <input type="password" name="upass" id="upass" id="upass" placeholder="Enter your password">
+        <button id="btn" onclick="getUserCred()">Log in</button>
+        <span id="result"></span>
+     </div>
+</body>
+<script> 
+    function getUserCred(){
+         const user_email = document.getElementById("email").value
+        const user_pass = document.getElementById("upass").value
+        const login_btn = document.getElementById("btn")
+        const result = document.getElementById("result")
+
+        result.textContent = `victim email is ${user_email} and password is ${user_pass}`
+    }
+</script>
+</html>
